@@ -1,0 +1,35 @@
+<html>
+
+<head>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+<body>
+Enter your project Name:<input type="text" style="background-color:pink;align:center" class="ee" placeholder="ProjectName">
+<input type="button" value="start" style="background-color:yellow;align:center" class="ff">
+<br>
+
+</body>
+<script>
+$(document).ready(function(){
+
+
+
+$(".ff").click(function(){
+var name=$(".ee").val();
+
+$.ajax({
+				method: "GET",
+				url: "clickfun",
+				//data: {"arg" : name},
+				//dataType: "text",
+				success: function(result){
+					console.log(result);}
+		});
+});
+});
+
+</script>
+
+
+</html>
